@@ -17,12 +17,10 @@ os_list = []
 year_list = []
 
 print(f"\n{'TYPE':8} {'MANU':8} {'PROC':6} {'RAM':6} {'HDD1':6} {'#HDD':6} {'HDD2':6} {'OS':6} {'YEAR':6}")
-print("---------------------------------------------------------------------------------")
+print("-----------------------------------------------------------------")
 with open("Week3/lab2b.csv") as csvfile:
 
     file = csv.reader(csvfile)
-
-    #filter comptypes
       
 
     for rec in file:
@@ -30,9 +28,9 @@ with open("Week3/lab2b.csv") as csvfile:
         #print(rec) #shows a LIST -> []
 
         #keep track of the rec count in the file
-        total_records += 1
-        #total_records = total_records + 1
-
+        total_records += 1 #adding each rec for a total (29)
+        
+        
         #FILTER for DISPLAY---------------
         #--comp type-- rec[0]
         if rec[0] =="D":
@@ -61,6 +59,8 @@ with open("Week3/lab2b.csv") as csvfile:
 
         if rec[5] == "1":
             hdd_2 = " " #"---" #"none"
+            os = rec[6]
+            year = rec [7]
 
 
 
@@ -89,10 +89,8 @@ with open("Week3/lab2b.csv") as csvfile:
 
         #final print for each record 
         #assign field width 
-        print(f"{comp_type:8} {manu:8} {processor:6} {ram:6} {hdd_1:6} {num_hdd:6} {hdd_2:6} {os:6} {year:6}")
-
+        
 #------DISCONNECTED FROM FILE--------------
-print("-------------------------------------\n")
 print(f"TOTAL RECORDS: {total_records}")
 
 #process the list to: print the machine data
@@ -110,7 +108,7 @@ for index in range (0, len(comp_type_list)):
     if comp_type_list[index] == "Desktop" and int(year_list[index]) <= 16:
         desktop_count += 1 #add 1 for every time "Desktop" is found
 
-print(f"TOTAL DESKTOPS IN FILE: {desktop_count}")
+print(f"\nTOTAL DESKTOPS IN FILE: {desktop_count}")
 
 #len() --> LENGTH FUNCTION; when passed a (list) it returns an integer: # of values in list
 #for index in comp_type_list (no need for length, "for index" will go through the whole list)
@@ -131,7 +129,7 @@ for index in range (0, len(hdd_1_list)):
 average = total_size / count_size 
 #could also use: 'len(hdd_1_list)' or 'total_records' in place of 'count size'
 
-print(f"AVERAGE HDD#1 SIZE: {average:0.2f}TB or {average*1000:0.2f}GB")
+print(f"\nAVERAGE HDD#1 SIZE: {average:0.2f}TB or {average*1000:0.2f}GB")
 
 
 #strings use double""
