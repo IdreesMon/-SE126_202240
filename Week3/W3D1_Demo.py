@@ -22,6 +22,9 @@ with open("Week3/lab2b.csv") as csvfile:
 
     file = csv.reader(csvfile)
 
+    #filter comptypes
+      
+
     for rec in file:
 
         #print(rec) #shows a LIST -> []
@@ -47,7 +50,7 @@ with open("Week3/lab2b.csv") as csvfile:
         elif rec[1] == "HP":
             manu = rec[1]
         else:
-            manu = "*ERRPR -- " + str(rec[1])
+            manu = "*ERROR -- " + str(rec[1])
         
 
         #--processor / ram / hdd_1 / num_hdd - exact from file
