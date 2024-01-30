@@ -2,13 +2,21 @@
 ##Lab 3B - Voter Registration
 #01/29/2024
 
+#Prompt: Rewrite the Voter Registration Lab utilizing the data from the file voters.csv.  Store the field data into respective 1D lists, and then process the lists to determine the 4 final output values.
 
+#variiable dictionary:
+
+#total_records:
+#not_of_age:
+#eligible_unregistered:
+#eligible_unvoted:
 
 
 
 
 
 #----- MAIN CODE BELOW -----
+print("")
 
 import csv
 print("\n")
@@ -62,7 +70,7 @@ for i in range(total_records):
         eligible_unvoted += 1
     #if voted
     elif registered[i] == "Y" and voted[i] == "Y":
-        voted += str([1])
+        individuals_voted += 1
 #Exit For Loop
 
 #Print final results
@@ -71,4 +79,4 @@ print(f"The Total amount of records processed was {total_records}")
 print(f"The amount of individuals NOT eligible due to age is {not_of_age}")
 print(f"The amount of individuals OLD enough to vote but have not registered: {eligible_unregistered}")
 print(f"The amount of individuals who are eligible but did not vote: {eligible_unvoted}")
-print(f"The amount of individuals who voted: {voted}")
+print(f"The amount of individuals who voted: {individuals_voted}")
