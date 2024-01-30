@@ -6,17 +6,24 @@
 
 #variiable dictionary:
 
-#total_records:
-#not_of_age:
-#eligible_unregistered:
-#eligible_unvoted:
+#total_records: the data imported from csv file
+#not_of_age: not of age to vote
+#eligible_unregistered: of age to vote, hasnt registered
+#eligible_unvoted: of age and registered, yet has not voted
+#individuals_voted: amount of people from data that voted
+#id: id number 
+#age: age of individual
+#registered: registered to vote
+#voted: individual has voted
+#file: variable allows for data to be read by program
+#record: collection of data from CSV
 
 
 
 
 
-#----- MAIN CODE BELOW -----
-print("")
+#----------------------- MAIN CODE BELOW -----------------------------
+print("\nWelcome to the Voter Registration, lets see if you're eligible to vote!")
 
 import csv
 print("\n")
@@ -75,8 +82,10 @@ for i in range(total_records):
 
 #Print final results
 print("\n")
-print(f"The Total amount of records processed was {total_records}")
-print(f"The amount of individuals NOT eligible due to age is {not_of_age}")
+print(f"The Total amount of records processed: {total_records}")
+print(f"The amount of individuals NOT eligible due to age: {not_of_age}")
 print(f"The amount of individuals OLD enough to vote but have not registered: {eligible_unregistered}")
 print(f"The amount of individuals who are eligible but did not vote: {eligible_unvoted}")
 print(f"The amount of individuals who voted: {individuals_voted}")
+#Exit program
+print("\nThank you for partcipating!")
