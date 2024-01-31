@@ -22,7 +22,7 @@ year_list = []
 
 text_file_list = []
 
-with open("Week3_ClassLab/lab3a.csv") as csvfile:
+with open("weekthree/lab3a.csv") as csvfile:
 
    print(f"\n{'TYPE':8} {'MANU':8} {'PROC':6} {'RAM':6} {'HDD1':6} {'#HDD':6} {'HDD2':6} {'OS':6} {'YEAR':6}")
 print("------------------------------------------------------------------")
