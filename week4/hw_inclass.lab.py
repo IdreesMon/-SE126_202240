@@ -86,6 +86,24 @@ for i in range(0, len(fname)):
     print(f"{fname[i]:12} \t {lname[i]:12} \t {test1[i]} \t {test2[i]} \t {test3[i]} \t {round(num_average[i]):12} \t\t\t {letter_grade[i]}")
 
 #------------------------- PART 3 -------------------------------------
+#create list
+print(f"\n{'FIRST':12} \t {'LAST':12} \t {'TEST1'} \t {'TEST2'} \t {'TEST3'} \t\t {'AVERAGE':12} \t{'LETTER GRADE'}")
+print("-----------------------------------------------------------------------------------------------")      
+
+    
+all_students =[]
+
+for i in range(0, len(fname)):
+
+    all_students.append(f"{fname[i]:12} \t {lname[i]:12} \t {test1[i]:5} {test2[i]:5} \t {test3[i]:4} \t {round(num_average[i]):12} \t\t\t {letter_grade[i]}")
+
+for i in range (0, len(all_students)):
+    for x in range (0, len(all_students[i])):
+        print(f"{all_students[i][x]}", end="")
+    
+    print ()
+
+
 
 
 
