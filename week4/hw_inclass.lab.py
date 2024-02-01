@@ -42,6 +42,7 @@ print ("----------------------------------------------------------------")
 #initiate a counter storing data in list -- avg, letter grade
 letter_grade = []
 num_average = []
+    
 
 
 
@@ -61,32 +62,31 @@ print(f"{'FIRST'}\t\t{'AVERAGE'}\n")
 for i in range(0, len(fname)):
      print(f"{fname[i]:12} \t {num_average[i]:.1f}")
 
-#SEQUENTIAL SEARCH - "in sequence" --> from beginning THROUGH the end
-     #looks through every value in the list and compares the data to eachother
-low_name = ""
-low_avg = 100 #start with highest value to drop to find lowest
 
-for i in range(0, len(num_average)):
-     
-     #determine if current average is lower than current low_avg
 
-     #if statments are for one time questions to data
-     # [i] CURRENT POSITION
-     if num_average[i]< low_avg:
-          
-          low_avg = num_average[i] #current average is lower, so becomes new low value
-          low_name = fname[i]
-     
-print(f"\n\t\tTHE LOWEST AVERAGE: {low_avg}. \n\t\tTHIS AVERAGE BELONGS TO: {low_name}")
+for i in range(0, len(fname)):
+    if num_average[i] >= 90:
+        letter_grade.append('A') 
+    elif num_average[i] >= 80:
+        letter_grade.append('B')
+    elif num_average[i] >= 70:
+        letter_grade.append('C')
+    elif num_average[i] >= 60:
+        letter_grade.append('D')
+    else:
+        letter_grade.append('F')
 
 #DISPLAY: total students in file, highest test average and score
 
-print(f"\n{'FIRST':12} \t {'LAST':12} \t {'TEST1'} \t {'TEST2'} \t {'TEST3'} \t\t {'AVERAGE':12}")
-print("--------------------------------------------------------------------------")      
+print(f"\n{'FIRST':12} \t {'LAST':12} \t {'TEST1'} \t {'TEST2'} \t {'TEST3'} \t\t {'AVERAGE':12} \t{'LETTER GRADE'}")
+print("-----------------------------------------------------------------------------------------------")      
 
 for i in range(0, len(fname)):
     #len() --> returns LENGTH of (item) -> for lists, it is the # of items in the list 
-    print(f"{fname[i]:12} \t {lname[i]:12} \t {test1[i]} \t {test2[i]} \t {test3[i]} \t {round(num_average[i]):12}")
+    print(f"{fname[i]:12} \t {lname[i]:12} \t {test1[i]} \t {test2[i]} \t {test3[i]} \t {round(num_average[i]):12} \t\t\t {letter_grade[i]}")
+
+#------------------------- PART 3 -------------------------------------
+
 
 
  
