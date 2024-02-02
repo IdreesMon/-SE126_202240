@@ -35,7 +35,6 @@ print("----------------------------------------------------------------")
 for i in range(0, len(fname)):
     #len() --> returns LENGTH of (item) -> for lists, it is the # of items in the list 
     print(f"{fname[i]:12} \t {lname[i]:12} \t {test1[i]} \t {test2[i]} \t {test3[i]}")
-print ("----------------------------------------------------------------")
 
 #------------------------------------------- PART 2 ---------------------------------------->
 
@@ -58,7 +57,10 @@ for i in range(0,len(fname)):
     #test1-test3 are all being processed through their respective index. Their variables were stored as empty list meaning they begin at 0 and end at final value of index. 
         
 #display students fname and test average
-print(f"{'FIRST'}\t\t{'AVERAGE'}\n")
+print("")
+print(f"{'FIRST'}\t\t{'AVERAGE'}")
+print ("----------------------------------------------------------------")
+
 for i in range(0, len(fname)):
      print(f"{fname[i]:12} \t {num_average[i]:.1f}")
 
