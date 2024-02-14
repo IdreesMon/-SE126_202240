@@ -8,21 +8,33 @@
 
 # variable dictionary:
 
+#genre
+#year 
+#song
+#artist 
+#mood 
+#records 
+#rock 
+#reggae
+#hiphop 
+#rnb 
 
 # --------------------------- MAIN CODE STARTS BELOW ---------------------------
 import csv
 
 # create some lists first
-genre = []
+genre=[]
 year = []
 song = []
 artist = []
 mood = []
+
 records = 0
 rock = 0
 reggae = 0
 hiphop = 0
 rnb = 0
+
 
 with open("midterm/music_midterm.csv") as libra:
     for rec in csv.reader(libra):
@@ -32,8 +44,15 @@ with open("midterm/music_midterm.csv") as libra:
         artist.append(rec[2])
         song.append(rec[3])
         mood.append(rec[4])
-        
 
+        if rec[0] == "Hip Hop":
+            hiphop += 1
+        elif rec[0] == "Rock":
+            rock += 1
+        elif rec[0] == "Reggae":
+            reggae += 1
+        elif rec[0] == "RnB":
+            rnb += 1
 
 def menu():
     print("\n")
@@ -114,6 +133,7 @@ while menu_choice != "4":
         mood_choice = input("\n\tSelect your mood: ")
         print(f"\n{'MOOD':10}  {'YEAR':12} {'ARTIST':18} \t{'SONG':15}")
         print("------------------------------------------------------------------------------------------")
+        
 
         if mood_choice == "1":
             #print(f"\nUPBEAT")
@@ -142,6 +162,8 @@ while menu_choice != "4":
                 if mood[i] == "Relaxed":
                     print(f"{mood[i]:7} {year[i]:8} \t {artist[i]:15} \t{song[i]:8}")
 
+        
+
 # --------------------- CHOICE 3 ----------------------------------------------------------
     #3 option to display entire playlist
     elif menu_choice == 3:  
@@ -157,6 +179,10 @@ while menu_choice != "4":
 # --------------------- CHOICE 4 -----------------------------------------------------------
     elif menu_choice == 4:
         print(f"\n\tTotal records in playlist: {records}")
+        print(f"\n\tRock: {rock}")
+        print(f"\n\tHip Hop: {hiphop}")
+        print(f"\n\tReggae: {reggae}")
+        print(f"\n\tRnB: {rnb}")
         #I WILL UPDATE WITH INDIVIDUAL GENRE COUNTS
         print("\nThank You for scrolling through my curated playlist! Come back for better tunes!\n")
         exit()
