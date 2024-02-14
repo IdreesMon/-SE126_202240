@@ -37,7 +37,7 @@ teacher = []
 records = 0
 
 #connect to the file, read the data, and store data into lists
-with open("/Users/kmtruchon/Desktop/PYTHON/SE126_202040/SE126/week5_listReview/listPractice1.txt") as unicorn:
+with open("week5_demo1/listPractice1.txt") as unicorn:
 
     file = csv.reader(unicorn)
 
