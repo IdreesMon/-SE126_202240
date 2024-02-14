@@ -58,7 +58,7 @@ while menu_choice != "4":
     menu_choice = menu()
 
 
-    # --------------------- CHOICE 1 ---------------------
+# --------------------- CHOICE 1 --------------------------------------------------
    
     if menu_choice == 1:
         print("\n")
@@ -103,7 +103,7 @@ while menu_choice != "4":
                         f"{genre[i]:7} {year[i]:8} \t {artist[i]:15} \t{song[i]:8}")
                
 
-    # --------------------- CHOICE 2 ---------------------
+# --------------------- CHOICE 2 -----------------------------------------------------
     #user input option 2 for Mood selection playlist
     elif menu_choice == 2:
         print("\n")
@@ -111,7 +111,7 @@ while menu_choice != "4":
         print("2. Melancholy")
         print("3. Motivated")
         print("4. Relaxed")
-        mood_choice = input("\nSelect your mood: ")
+        mood_choice = input("\n\tSelect your mood: ")
         print(f"\n{'MOOD':10}  {'YEAR':12} {'ARTIST':18} \t{'SONG':15}")
         print("------------------------------------------------------------------------------------------")
 
@@ -142,7 +142,7 @@ while menu_choice != "4":
                 if mood[i] == "Relaxed":
                     print(f"{mood[i]:7} {year[i]:8} \t {artist[i]:15} \t{song[i]:8}")
 
-    # --------------------- CHOICE 3 ---------------------
+# --------------------- CHOICE 3 ----------------------------------------------------------
     #3 option to display entire playlist
     elif menu_choice == 3:  
         print(f"\n{'GENRE':12} \t {'YEAR':12} \t {'ARTIST'} \t\t\t {'SONG':15}")
@@ -150,11 +150,11 @@ while menu_choice != "4":
         for i in range(0, len(genre)):
         
             print(
-                f"{genre[i]:12} \t {year[i]:8} \t {artist[i]:15} \t\t {song[i]:8}")
+                f"{genre[i]:8} \t {year[i]} \t\t {artist[i]:15} \t\t {song[i]:8}")
             
         
    
-    # --------------------- CHOICE 4 ---------------------
+# --------------------- CHOICE 4 -----------------------------------------------------------
     elif menu_choice == 4:
         print(f"\n\tTotal records in playlist: {records}")
         #I WILL UPDATE WITH INDIVIDUAL GENRE COUNTS
