@@ -99,10 +99,11 @@ while answer.lower() == "y":
     elif user_choice == 4:
         class_search()
     elif user_choice == 5:
-        print("\n\tGoodbye!")
+        print("\n\t\tThank you for using the program. Goodbye!\n")
+        exit()
     
     answer = input("\n\tDo you want to continue? (y/n): ")
     while answer.lower() != "y" and answer.lower() != "n":
         answer = input("\n\tDo you want to continue? (y/n): ")
-        print("**ERROR**ERROR**")
-        
+    if answer.lower() == "n":
+        print("\n\t\tThank you for using the program. Goodbye!\n")
