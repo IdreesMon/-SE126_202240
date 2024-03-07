@@ -75,19 +75,19 @@ def display_seats():
 
 #prompt the user to select an option from menu function
 def prompt_menu():
-    print("\n\nMenu")
-    print("0. Display Seats")
-    print("1. Add to cart")
-    print("2. View Total Seat Sales")
-    print("3. View Seat Information")
-    print("4. Checkout")
-    print("5. Exit")
+    print("\n\n\t\t\t\tMenu:\n")
+    print("1. Display Seats")
+    print("2. Add to cart")
+    print("3. View Total Seat Sales")
+    print("4. View Seat Information")
+    print("5. Checkout")
+    print("6. Exit")
 
     answer = False #set answer to False so that the while loop can run
     while answer is False:
         try:
-            answer = int(input("Please select an option: "))
-            if answer not in [0, 1, 2, 3, 4, 5]:
+            answer = int(input("\n\t\t\tPlease select an option: "))
+            if answer not in [1, 2, 3, 4, 5, 6]:
                 print("Please select a valid option")
                 answer = None
                 
@@ -112,7 +112,7 @@ def add_to_cart(): #add to cart function
     row = None
     while row is None:
         try:
-            row = int(input("Please enter the row number (1-15): ")) - 1
+            row = int(input("\nPlease enter the row number (1-15): ")) - 1
             if row not in range(0, 15):
                 print("Please enter a valid row number")
                 row = None
@@ -142,7 +142,7 @@ def add_to_cart(): #add to cart function
         else:
             cart.append((row, column)) #append the row and column to the cart to store the seat as unavailable
     
-    if input("Would you like to add another seat? (y/n): ").lower() == "y":
+    if input("\nWould you like to add another seat? (y/n): ").lower() == "y":
         add_to_cart()
 
 
@@ -222,23 +222,22 @@ def handle_answer(answer):
         print("Thank you for using the program")
         exit() #exit program
 
-
-if __name__ == "__main__":
-    answer = None
-    while answer != 5:
-        answer = prompt_menu()
+answer = None  #everytime you do something it will prompt you to select an option from the menu
+while answer != 6:
+    answer = prompt_menu()
+    
+    if answer == 1:
+        display_seats()
         
-        if answer == 0:
-            display_seats()
-            
-        elif answer == 1:
-            add_to_cart()
+    elif answer == 2:
+        add_to_cart()
 
-        elif answer == 2:
-            view_total_seat_sales()
+    elif answer == 4:
+        view_total_seat_sales()
 
-        elif answer == 3:
-            view_seat_information()
+    elif answer == 5:
+        checkout()
 
-        elif answer == 4:
-            checkout()
+
+
+#I would like for the seats to show  no availability after displaying the seats option instead of having to select checkout
