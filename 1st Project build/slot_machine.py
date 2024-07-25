@@ -1,6 +1,7 @@
 #Idrees M Abdurrazzak
 #06/02/2024
 #My first python project
+#update
 
 #This program involves me following a tutorial that works as practice on
 #For loops, constants, arrays, indexes, while loops
